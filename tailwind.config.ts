@@ -53,6 +53,8 @@ export default {
         },
         glow: "hsl(var(--glow))",
         success: "hsl(var(--success))",
+        gold: "hsl(var(--gold))",
+        "arc-reactor": "hsl(var(--arc-reactor))",
         sidebar: {
           DEFAULT: "hsl(var(--sidebar-background))",
           foreground: "hsl(var(--sidebar-foreground))",
