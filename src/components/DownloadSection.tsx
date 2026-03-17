@@ -13,20 +13,21 @@ const DownloadSection = () => (
         initial={{ opacity: 0, y: 30 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
-        className="mx-auto max-w-2xl rounded-2xl border border-border bg-card/80 p-10 text-center backdrop-blur"
+        className="mx-auto max-w-2xl rounded-2xl border border-primary/20 bg-card/80 p-10 text-center backdrop-blur shadow-[0_0_60px_-20px_hsl(195_100%_50%/0.1)]"
       >
-        <h2 className="font-display text-3xl font-bold md:text-4xl">
-          Ready to supercharge your machine?
+        <p className="mb-4 font-display text-xs uppercase tracking-[0.3em] text-primary">Ready to Deploy</p>
+        <h2 className="font-display text-3xl font-bold uppercase md:text-4xl">
+          Suit Up, Sir.
         </h2>
         <p className="mt-4 text-muted-foreground">
-          Download Jarvis AI for free. Run it locally, keep your data private, and automate everything.
+          Download J.A.R.V.I.S for free. Run it locally on your machine, keep your data private, and let your AI handle the rest.
         </p>
         <div className="mt-8 flex flex-wrap items-center justify-center gap-4">
-          <Button size="lg" className="gap-2 px-8">
+          <Button size="lg" className="gap-2 px-8 font-display text-xs uppercase tracking-wider">
             <Download className="h-5 w-5" />
-            Download Now
+            Initialize Download
           </Button>
-          <Button variant="outline" size="lg" className="gap-2 px-8" asChild>
+          <Button variant="outline" size="lg" className="gap-2 px-8 font-display text-xs uppercase tracking-wider" asChild>
             <a href="https://github.com/AK050744" target="_blank" rel="noopener noreferrer">
               <Github className="h-5 w-5" />
               View on GitHub

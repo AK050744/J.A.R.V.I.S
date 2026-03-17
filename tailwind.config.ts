@@ -14,8 +14,8 @@ export default {
     },
     extend: {
       fontFamily: {
-        display: ['"Space Grotesk"', 'sans-serif'],
-        body: ['"Inter"', 'sans-serif'],
+        display: ['"Orbitron"', 'sans-serif'],
+        body: ['"Rajdhani"', 'sans-serif'],
       },
       colors: {
         border: "hsl(var(--border))",
@@ -53,6 +53,8 @@ export default {
         },
         glow: "hsl(var(--glow))",
         success: "hsl(var(--success))",
+        gold: "hsl(var(--gold))",
+        "arc-reactor": "hsl(var(--arc-reactor))",
         sidebar: {
           DEFAULT: "hsl(var(--sidebar-background))",
           foreground: "hsl(var(--sidebar-foreground))",

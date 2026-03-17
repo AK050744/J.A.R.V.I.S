@@ -2,10 +2,10 @@ import { motion } from "framer-motion";
 import { Download, Terminal, Mic, Rocket } from "lucide-react";
 
 const steps = [
-  { icon: Download, title: "Download", desc: "Clone the repo or download the package to your local machine." },
-  { icon: Terminal, title: "Install Dependencies", desc: "Run pip install to set up Python, Selenium, and all required libraries." },
-  { icon: Mic, title: "Launch & Speak", desc: "Start Jarvis and begin giving voice commands immediately." },
-  { icon: Rocket, title: "Automate Everything", desc: "Let Jarvis handle web searches, system tasks, and intelligent conversations." },
+  { icon: Download, title: "Acquire", desc: "Clone the Stark repo or download the package to your local machine." },
+  { icon: Terminal, title: "Install", desc: "Run pip install — Python, Selenium, and all modules come online." },
+  { icon: Mic, title: "Activate", desc: "\"Jarvis, are you there?\" — Launch and begin voice interaction." },
+  { icon: Rocket, title: "Deploy", desc: "Let J.A.R.V.I.S handle web recon, system ops, and intelligent conversations." },
 ];
 
 const HowItWorksSection = () => (
@@ -17,8 +17,9 @@ const HowItWorksSection = () => (
         viewport={{ once: true }}
         className="mb-16 text-center"
       >
-        <h2 className="font-display text-4xl font-bold md:text-5xl">
-          Get started in <span className="text-primary">minutes</span>
+        <p className="mb-4 font-display text-xs uppercase tracking-[0.3em] text-primary">Deployment Sequence</p>
+        <h2 className="font-display text-4xl font-bold uppercase md:text-5xl">
+          Online in <span className="text-accent">4 steps</span>
         </h2>
       </motion.div>
 
@@ -32,13 +33,13 @@ const HowItWorksSection = () => (
             transition={{ delay: i * 0.12 }}
             className="relative text-center"
           >
-            <div className="mx-auto mb-4 flex h-16 w-16 items-center justify-center rounded-2xl bg-primary/10 text-primary">
+            <div className="mx-auto mb-4 flex h-16 w-16 items-center justify-center rounded-2xl border border-primary/20 bg-primary/10 text-primary">
               <s.icon className="h-7 w-7" />
             </div>
-            <span className="absolute -top-2 left-1/2 -translate-x-1/2 rounded-full bg-primary px-2.5 py-0.5 text-xs font-bold text-primary-foreground">
-              {i + 1}
+            <span className="absolute -top-2 left-1/2 -translate-x-1/2 rounded-full bg-primary px-2.5 py-0.5 font-display text-xs font-bold text-primary-foreground">
+              {String(i + 1).padStart(2, "0")}
             </span>
-            <h3 className="mb-2 font-display text-lg font-semibold text-foreground">{s.title}</h3>
+            <h3 className="mb-2 font-display text-sm font-semibold uppercase tracking-wider text-foreground">{s.title}</h3>
             <p className="text-sm text-muted-foreground">{s.desc}</p>
           </motion.div>
         ))}

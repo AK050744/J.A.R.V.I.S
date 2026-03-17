@@ -1,13 +1,13 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
-import { Menu, X, Bot } from "lucide-react";
+import { Menu, X, Shield } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const navLinks = [
-  { label: "Features", href: "#features" },
-  { label: "Agent", href: "#agent" },
-  { label: "How It Works", href: "#how-it-works" },
-  { label: "Tech Stack", href: "#tech-stack" },
+  { label: "Systems", href: "#features" },
+  { label: "Protocol", href: "#agent" },
+  { label: "Deploy", href: "#how-it-works" },
+  { label: "Arsenal", href: "#tech-stack" },
   { label: "Download", href: "#download" },
 ];
 
@@ -22,19 +22,22 @@ const Navbar = () => {
     >
       <div className="container flex h-16 items-center justify-between">
         <a href="#" className="flex items-center gap-2">
-          <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-primary">
-            <Bot className="h-5 w-5 text-primary-foreground" />
+          <div className="relative flex h-9 w-9 items-center justify-center rounded-full border-2 border-primary bg-primary/10">
+            <Shield className="h-4 w-4 text-primary" />
+            <div className="absolute inset-0 animate-pulse-glow rounded-full bg-primary/20" />
           </div>
-          <span className="font-display text-xl font-bold text-foreground">Jarvis AI</span>
+          <div className="flex flex-col leading-none">
+            <span className="font-display text-sm font-bold uppercase tracking-widest text-primary">J.A.R.V.I.S</span>
+            <span className="text-[10px] uppercase tracking-wider text-muted-foreground">Stark Industries</span>
+          </div>
         </a>
 
-        {/* Desktop */}
         <div className="hidden items-center gap-8 md:flex">
           {navLinks.map((l) => (
             <a
               key={l.href}
               href={l.href}
-              className="text-sm text-muted-foreground transition-colors hover:text-foreground"
+              className="font-display text-xs uppercase tracking-wider text-muted-foreground transition-colors hover:text-primary"
             >
               {l.label}
             </a>
@@ -42,19 +45,19 @@ const Navbar = () => {
         </div>
 
         <div className="hidden items-center gap-3 md:flex">
-          <Button variant="outline" size="sm">
-            Documentation
+          <Button variant="outline" size="sm" className="font-display text-xs uppercase tracking-wider">
+            Docs
           </Button>
-          <Button size="sm">Download Free</Button>
+          <Button size="sm" className="font-display text-xs uppercase tracking-wider">
+            Initialize
+          </Button>
         </div>
 
-        {/* Mobile toggle */}
         <button className="md:hidden text-foreground" onClick={() => setOpen(!open)}>
           {open ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
         </button>
       </div>
 
-      {/* Mobile menu */}
       {open && (
         <motion.div
           initial={{ opacity: 0, height: 0 }}
@@ -66,13 +69,13 @@ const Navbar = () => {
               <a
                 key={l.href}
                 href={l.href}
-                className="text-sm text-muted-foreground"
+                className="font-display text-xs uppercase tracking-wider text-muted-foreground"
                 onClick={() => setOpen(false)}
               >
                 {l.label}
               </a>
             ))}
-            <Button size="sm" className="w-full">Download Free</Button>
+            <Button size="sm" className="w-full font-display text-xs uppercase tracking-wider">Initialize</Button>
           </div>
         </motion.div>
       )}
