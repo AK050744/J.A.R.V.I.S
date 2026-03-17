@@ -2,18 +2,18 @@ import { motion } from "framer-motion";
 import { MessageSquare, Sparkles, Search, Globe, BarChart3, CheckCircle2 } from "lucide-react";
 
 const steps = [
-  { icon: MessageSquare, label: "Your voice command", desc: "Start with a simple request or complex task using your voice" },
-  { icon: Sparkles, label: "Agent deep research and reasoning", desc: "AI analyzes your request and determines the best approach" },
-  { icon: Search, label: "Using tools automatically", desc: "Seamlessly integrates with Selenium, web scraping, and system APIs" },
-  { icon: CheckCircle2, label: "Your expected output", desc: "Delivers exactly what you need, formatted and ready to use" },
+  { icon: MessageSquare, label: "Voice Command Initiated", desc: "\"Jarvis, find the latest on quantum computing.\"" },
+  { icon: Sparkles, label: "Deep Analysis Protocol", desc: "AI reasons through context, intent, and optimal execution path." },
+  { icon: Search, label: "Autonomous Tool Deployment", desc: "Selenium, web scraping, and system APIs engaged automatically." },
+  { icon: CheckCircle2, label: "Mission Complete", desc: "Results delivered — formatted, analyzed, ready for action." },
 ];
 
 const chatMessages = [
-  { role: "user", text: "Hey Jarvis, search for the latest Python tutorials" },
-  { role: "agent", text: "AI is researching and reasoning", icon: Sparkles },
-  { role: "agent", text: "Using Selenium to search", icon: Globe },
+  { role: "user", text: "Jarvis, run a search on Python tutorials" },
+  { role: "agent", text: "Analyzing request, sir...", icon: Sparkles },
+  { role: "agent", text: "Deploying Selenium recon", icon: Globe },
   { role: "agent", text: "Extracting top results", icon: Search },
-  { role: "agent", text: "Analyze and present findings", icon: BarChart3 },
+  { role: "agent", text: "Analysis complete. Displaying findings.", icon: BarChart3 },
 ];
 
 const AgentSection = () => {
@@ -22,16 +22,19 @@ const AgentSection = () => {
       <div className="pointer-events-none absolute right-0 top-1/2 h-[400px] w-[400px] -translate-y-1/2 rounded-full bg-primary/10 blur-[120px]" />
 
       <div className="container">
-        <motion.h2
+        <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="mb-16 font-display text-4xl font-bold md:text-5xl"
+          className="mb-16"
         >
-          Agent, Multi-Agent
-          <br />
-          and Automation
-        </motion.h2>
+          <p className="mb-4 font-display text-xs uppercase tracking-[0.3em] text-accent">Protocol Active</p>
+          <h2 className="font-display text-4xl font-bold uppercase md:text-5xl">
+            Agent Protocol
+            <br />
+            <span className="text-primary">& Automation</span>
+          </h2>
+        </motion.div>
 
         <div className="grid items-start gap-12 lg:grid-cols-2">
           {/* Left — steps */}
@@ -45,39 +48,39 @@ const AgentSection = () => {
                 transition={{ delay: i * 0.15 }}
                 className="flex gap-4"
               >
-                <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-primary/10 text-primary">
+                <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg border border-primary/20 bg-primary/10 text-primary">
                   <s.icon className="h-5 w-5" />
                 </div>
                 <div>
-                  <h4 className="font-display font-semibold text-foreground">{s.label}</h4>
+                  <h4 className="font-display text-xs font-semibold uppercase tracking-wider text-foreground">{s.label}</h4>
                   <p className="text-sm text-muted-foreground">{s.desc}</p>
                 </div>
               </motion.div>
             ))}
           </div>
 
-          {/* Right — chat mock */}
+          {/* Right — HUD mock */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="rounded-2xl border border-border bg-card/80 p-1 backdrop-blur"
+            className="rounded-2xl border border-primary/20 bg-card/80 p-1 backdrop-blur shadow-[0_0_40px_-15px_hsl(195_100%_50%/0.15)]"
           >
             {/* Browser chrome */}
             <div className="flex items-center gap-2 rounded-t-xl bg-secondary px-4 py-3">
               <div className="flex gap-1.5">
                 <span className="h-3 w-3 rounded-full bg-destructive/60" />
-                <span className="h-3 w-3 rounded-full bg-yellow-500/60" />
+                <span className="h-3 w-3 rounded-full bg-accent/60" />
                 <span className="h-3 w-3 rounded-full bg-success/60" />
               </div>
-              <div className="ml-4 flex-1 rounded-md bg-background/50 px-3 py-1 text-xs text-muted-foreground">
-                jarvis-ai://local
+              <div className="ml-4 flex-1 rounded-md bg-background/50 px-3 py-1 font-display text-[10px] uppercase tracking-widest text-primary/60">
+                stark://jarvis.local
               </div>
             </div>
 
             <div className="space-y-3 p-5">
-              <div className="text-center font-display text-lg font-semibold text-foreground">
-                Jarvis Agent
+              <div className="text-center font-display text-sm font-semibold uppercase tracking-[0.2em] text-primary">
+                ● J.A.R.V.I.S Interface
               </div>
               {chatMessages.map((m, i) => (
                 <motion.div
