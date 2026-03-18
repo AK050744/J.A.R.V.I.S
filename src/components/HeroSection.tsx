@@ -52,7 +52,7 @@ const HeroSection = () => {
           transition={{ delay: 0.4 }}
           className="mx-auto max-w-5xl font-display text-4xl font-bold uppercase leading-tight tracking-tight md:text-7xl"
         >
-          <span className="text-foreground">Your Personal AI.</span>
+          <span className="text-foreground">AI-Powered Assistant.</span>
           <br />
           <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
             J.A.R.V.I.S at Your Service
