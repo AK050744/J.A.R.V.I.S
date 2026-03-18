@@ -35,6 +35,24 @@ const DownloadSection = () => (
             </a>
           </Button>
         </div>
+
+        {/* JARVIS image with modal */}
+        <Dialog>
+          <DialogTrigger asChild>
+            <motion.div
+              initial={{ opacity: 0, scale: 0.9 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              viewport={{ once: true }}
+              className="mx-auto mt-10 w-40 cursor-pointer md:w-56"
+            >
+              <img src={jarvisImage} alt="J.A.R.V.I.S AI" className="w-full drop-shadow-[0_0_40px_hsl(195_100%_50%/0.4)] transition-transform hover:scale-105" />
+            </motion.div>
+          </DialogTrigger>
+          <DialogContent className="border-primary/20 bg-background/95 backdrop-blur-xl sm:max-w-lg">
+            <img src={jarvisImage} alt="J.A.R.V.I.S AI" className="w-full drop-shadow-[0_0_60px_hsl(195_100%_50%/0.5)]" />
+            <p className="text-center font-display text-sm uppercase tracking-widest text-primary">J.A.R.V.I.S — Listening</p>
+          </DialogContent>
+        </Dialog>
       </motion.div>
     </div>
   </section>
