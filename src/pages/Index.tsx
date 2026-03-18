@@ -3,7 +3,7 @@ import HeroSection from "@/components/HeroSection";
 import FeaturesSection from "@/components/FeaturesSection";
 import AgentSection from "@/components/AgentSection";
 import HowItWorksSection from "@/components/HowItWorksSection";
-import TechStackSection from "@/components/TechStackSection";
+
 import DownloadSection from "@/components/DownloadSection";
 import Footer from "@/components/Footer";
 
