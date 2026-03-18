@@ -2,10 +2,10 @@ import { motion } from "framer-motion";
 import { Download, Terminal, Mic, Rocket } from "lucide-react";
 
 const steps = [
-  { icon: Download, title: "Acquire", desc: "Clone the Stark repo or download the package to your local machine." },
+  { icon: Download, title: "Download", desc: "Clone the repo or download the package to your local machine." },
   { icon: Terminal, title: "Install", desc: "Run pip install — Python, Selenium, and all modules come online." },
   { icon: Mic, title: "Activate", desc: "\"Jarvis, are you there?\" — Launch and begin voice interaction." },
-  { icon: Rocket, title: "Deploy", desc: "Let J.A.R.V.I.S handle web recon, system ops, and intelligent conversations." },
+  { icon: Rocket, title: "Automate", desc: "Let J.A.R.V.I.S handle web automation, system ops, and intelligent conversations." },
 ];
 
 const HowItWorksSection = () => (
@@ -17,9 +17,9 @@ const HowItWorksSection = () => (
         viewport={{ once: true }}
         className="mb-16 text-center"
       >
-        <p className="mb-4 font-display text-xs uppercase tracking-[0.3em] text-primary">Deployment Sequence</p>
+        <p className="mb-4 font-display text-xs uppercase tracking-[0.3em] text-primary">Getting Started</p>
         <h2 className="font-display text-4xl font-bold uppercase md:text-5xl">
-          Online in <span className="text-accent">4 steps</span>
+          Online in <span className="text-accent">4 Steps</span>
         </h2>
       </motion.div>
 

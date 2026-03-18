@@ -3,15 +3,15 @@ import { MessageSquare, Sparkles, Search, Globe, BarChart3, CheckCircle2 } from 
 
 const steps = [
   { icon: MessageSquare, label: "Voice Command Initiated", desc: "\"Jarvis, find the latest on quantum computing.\"" },
-  { icon: Sparkles, label: "Deep Analysis Protocol", desc: "AI reasons through context, intent, and optimal execution path." },
+  { icon: Sparkles, label: "Deep Analysis", desc: "AI reasons through context, intent, and optimal execution path." },
   { icon: Search, label: "Autonomous Tool Deployment", desc: "Selenium, web scraping, and system APIs engaged automatically." },
   { icon: CheckCircle2, label: "Mission Complete", desc: "Results delivered — formatted, analyzed, ready for action." },
 ];
 
 const chatMessages = [
   { role: "user", text: "Jarvis, run a search on Python tutorials" },
-  { role: "agent", text: "Analyzing request, sir...", icon: Sparkles },
-  { role: "agent", text: "Deploying Selenium recon", icon: Globe },
+  { role: "agent", text: "Analyzing request...", icon: Sparkles },
+  { role: "agent", text: "Deploying Selenium automation", icon: Globe },
   { role: "agent", text: "Extracting top results", icon: Search },
   { role: "agent", text: "Analysis complete. Displaying findings.", icon: BarChart3 },
 ];
@@ -28,9 +28,9 @@ const AgentSection = () => {
           viewport={{ once: true }}
           className="mb-16"
         >
-          <p className="mb-4 font-display text-xs uppercase tracking-[0.3em] text-accent">Protocol Active</p>
+          <p className="mb-4 font-display text-xs uppercase tracking-[0.3em] text-accent">How It Works</p>
           <h2 className="font-display text-4xl font-bold uppercase md:text-5xl">
-            Agent Protocol
+            Agent Workflow
             <br />
             <span className="text-primary">& Automation</span>
           </h2>
@@ -59,7 +59,7 @@ const AgentSection = () => {
             ))}
           </div>
 
-          {/* Right — HUD mock */}
+          {/* Right — interface mock */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -74,7 +74,7 @@ const AgentSection = () => {
                 <span className="h-3 w-3 rounded-full bg-success/60" />
               </div>
               <div className="ml-4 flex-1 rounded-md bg-background/50 px-3 py-1 font-display text-[10px] uppercase tracking-widest text-primary/60">
-                stark://jarvis.local
+                jarvis://local
               </div>
             </div>
 

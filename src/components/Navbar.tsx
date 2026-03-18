@@ -4,10 +4,10 @@ import { Menu, X, Shield } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const navLinks = [
-  { label: "Systems", href: "#features" },
-  { label: "Protocol", href: "#agent" },
-  { label: "Deploy", href: "#how-it-works" },
-  { label: "Arsenal", href: "#tech-stack" },
+  { label: "Features", href: "#features" },
+  { label: "How It Works", href: "#agent" },
+  { label: "Setup", href: "#how-it-works" },
+  { label: "Tech Stack", href: "#tech-stack" },
   { label: "Download", href: "#download" },
 ];
 
@@ -26,10 +26,7 @@ const Navbar = () => {
             <Shield className="h-4 w-4 text-primary" />
             <div className="absolute inset-0 animate-pulse-glow rounded-full bg-primary/20" />
           </div>
-          <div className="flex flex-col leading-none">
-            <span className="font-display text-sm font-bold uppercase tracking-widest text-primary">J.A.R.V.I.S</span>
-            <span className="text-[10px] uppercase tracking-wider text-muted-foreground">Stark Industries</span>
-          </div>
+          <span className="font-display text-sm font-bold uppercase tracking-widest text-primary">J.A.R.V.I.S</span>
         </a>
 
         <div className="hidden items-center gap-8 md:flex">
@@ -49,7 +46,7 @@ const Navbar = () => {
             Docs
           </Button>
           <Button size="sm" className="font-display text-xs uppercase tracking-wider">
-            Initialize
+            Download
           </Button>
         </div>
 
@@ -75,7 +72,7 @@ const Navbar = () => {
                 {l.label}
               </a>
             ))}
-            <Button size="sm" className="w-full font-display text-xs uppercase tracking-wider">Initialize</Button>
+            <Button size="sm" className="w-full font-display text-xs uppercase tracking-wider">Download</Button>
           </div>
         </motion.div>
       )}
