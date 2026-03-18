@@ -1,6 +1,8 @@
 import { motion } from "framer-motion";
-import { ArrowRight, Check, Download, Shield } from "lucide-react";
+import { ArrowRight, Check, Download, Shield, X } from "lucide-react";
+import { useState } from "react";
 import { Button } from "@/components/ui/button";
+import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
 import jarvisImage from "@/assets/jarvis-listening.png";
 
 const HeroSection = () => {
