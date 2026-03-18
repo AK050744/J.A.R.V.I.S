@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { ArrowRight, Check, Download, Shield } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import jarvisImage from "@/assets/jarvis-listening.png";
 
 const HeroSection = () => {
   return (
@@ -17,11 +18,21 @@ const HeroSection = () => {
       />
 
       <div className="container relative z-10 text-center">
+        {/* JARVIS listening image */}
+        <motion.div
+          initial={{ opacity: 0, scale: 0.8 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ delay: 0.1, duration: 0.8 }}
+          className="mx-auto mb-8 w-48 md:w-64"
+        >
+          <img src={jarvisImage} alt="J.A.R.V.I.S AI listening interface" className="w-full drop-shadow-[0_0_40px_hsl(195_100%_50%/0.4)]" />
+        </motion.div>
+
         {/* Toggle pill */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.1 }}
+          transition={{ delay: 0.2 }}
           className="mb-6 inline-flex items-center gap-1 rounded-full border border-primary/30 bg-secondary p-1"
         >
           <span className="rounded-full bg-primary px-4 py-1.5 font-display text-xs font-medium uppercase tracking-wider text-primary-foreground">
@@ -36,11 +47,11 @@ const HeroSection = () => {
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.2 }}
+          transition={{ delay: 0.3 }}
           className="mb-8 inline-flex items-center gap-2 rounded-full border border-primary/20 bg-primary/5 px-5 py-2 text-sm text-primary backdrop-blur"
         >
           <Shield className="h-4 w-4" />
-          Stark Industries — Private AI for Your Machine
+          Private AI Assistant — Runs on Your Machine
           <ArrowRight className="h-4 w-4" />
         </motion.div>
 
@@ -48,10 +59,10 @@ const HeroSection = () => {
         <motion.h1
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.3 }}
+          transition={{ delay: 0.4 }}
           className="mx-auto max-w-5xl font-display text-4xl font-bold uppercase leading-tight tracking-tight md:text-7xl"
         >
-          <span className="text-foreground">Good Evening, Sir.</span>
+          <span className="text-foreground">Your Personal AI.</span>
           <br />
           <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
             J.A.R.V.I.S at Your Service
@@ -62,11 +73,10 @@ const HeroSection = () => {
         <motion.p
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.45 }}
+          transition={{ delay: 0.5 }}
           className="mx-auto mt-6 max-w-2xl text-lg text-muted-foreground md:text-xl"
         >
-          Just like Tony Stark's AI — automate tasks, browse the web, control your system, and get
-          real-time intelligence. All through voice commands. Running locally. On your machine.
+          Automate tasks, browse the web, control your system, and get real-time intelligence — all through voice commands. Running locally on your machine.
         </motion.p>
 
         {/* Trust badges */}
@@ -76,7 +86,7 @@ const HeroSection = () => {
           transition={{ delay: 0.6 }}
           className="mt-8 flex flex-wrap items-center justify-center gap-6 text-sm text-muted-foreground"
         >
-          {["100% Free & Open Source", "Runs Locally — No Cloud", "Your Own AI Butler"].map((t) => (
+          {["100% Free & Open Source", "Runs Locally — No Cloud", "Your Own AI Assistant"].map((t) => (
             <span key={t} className="flex items-center gap-2 font-display text-xs uppercase tracking-wider">
               <Check className="h-4 w-4 text-primary" />
               {t}
@@ -93,22 +103,12 @@ const HeroSection = () => {
         >
           <Button size="lg" className="gap-2 px-8 font-display text-xs uppercase tracking-wider">
             <Download className="h-5 w-5" />
-            Initialize J.A.R.V.I.S
+            Download J.A.R.V.I.S
           </Button>
           <Button variant="outline" size="lg" className="px-8 font-display text-xs uppercase tracking-wider">
-            View Protocol
+            View Documentation
           </Button>
         </motion.div>
-
-        {/* Tagline */}
-        <motion.p
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 0.9 }}
-          className="mt-12 font-display text-xs uppercase tracking-[0.3em] text-primary/50"
-        >
-          "Sometimes you gotta run before you can walk." — Tony Stark
-        </motion.p>
       </div>
     </section>
   );

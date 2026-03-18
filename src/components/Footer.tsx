@@ -10,7 +10,7 @@ const Footer = () => (
         <span className="font-display text-xs font-semibold uppercase tracking-widest text-foreground">J.A.R.V.I.S</span>
       </div>
       <p className="font-display text-[10px] uppercase tracking-wider text-muted-foreground">
-        © {new Date().getFullYear()} Stark Industries. Open-source & free to use. Not affiliated with Marvel.
+        © {new Date().getFullYear()} J.A.R.V.I.S AI. Open-source & free to use.
       </p>
     </div>
   </footer>

@@ -5,27 +5,27 @@ const features = [
   {
     icon: Mic,
     title: "Voice Interface",
-    description: "\"Sir, I'm ready.\" — Speak naturally and J.A.R.V.I.S responds. Hands-free, like in the workshop.",
+    description: "Speak naturally and J.A.R.V.I.S responds instantly. Hands-free control for your entire workflow.",
   },
   {
     icon: Globe,
-    title: "Web Recon",
-    description: "Automates Google searches, extracts intel, fills forms — Selenium-powered web operations at your command.",
+    title: "Web Automation",
+    description: "Automates Google searches, extracts data, fills forms — Selenium-powered web operations at your command.",
   },
   {
     icon: Newspaper,
-    title: "Intel Briefing",
-    description: "Real-time news, weather, and situational updates. Your morning briefing, just like Tony gets.",
+    title: "Live Intel",
+    description: "Real-time news, weather, and situational updates. Stay informed with automated briefings.",
   },
   {
     icon: Settings,
-    title: "System Override",
+    title: "System Control",
     description: "Open apps, control music, manage system settings — full control of your machine, voice-activated.",
   },
   {
     icon: MessageSquare,
     title: "AI Reasoning",
-    description: "Intelligent conversations and query resolution. Think of it as your digital co-pilot for everything.",
+    description: "Intelligent conversations and query resolution. Your digital co-pilot for everything.",
   },
   {
     icon: Zap,
@@ -44,7 +44,7 @@ const FeaturesSection = () => {
           viewport={{ once: true }}
           className="mb-16 text-center"
         >
-          <p className="mb-4 font-display text-xs uppercase tracking-[0.3em] text-primary">Systems Online</p>
+          <p className="mb-4 font-display text-xs uppercase tracking-[0.3em] text-primary">Core Modules</p>
           <h2 className="font-display text-4xl font-bold uppercase md:text-5xl">
             All Systems{" "}
             <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
