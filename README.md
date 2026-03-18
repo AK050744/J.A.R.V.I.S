@@ -1,73 +1,19 @@
-# Welcome to your Lovable project
+Jarvis AI is a Python-based virtual assistant that performs automated tasks using voice commands and AI-driven functionalities. It integrates Selenium for web automation, allowing users to search Google, open websites, and interact with web pages seamlessly. rvis AI is a Python-powered virtual assistant designed to automate tasks, control your system, browse the web, fetch real-time information, and interact using voice commands. It integrates AI, web automation, and system control features to provide a seamless user experience.
 
-## Project info
+🔥 Features
 
-**URL**: https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID
+✅ Voice Recognition – Interact with Jarvis using natural speech. ✅ Web Automation (Selenium) – Automate Google searches, fill forms, and extract data. ✅ News & Updates – Get real-time news, weather updates, and general information. ✅ System Control – Open applications, play music, manage system settings. ✅ AI Chatbot – Answer queries and engage in intelligent conversations. ✅ Real-Time Assistance – Perform tasks dynamically based on user commands.
 
-## How can I edit this code?
+🛠 Tech Stack
 
-There are several ways of editing your application.
+Python 🐍 – Core AI logic
 
-**Use Lovable**
+Selenium 🌐 – Web automation
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and start prompting.
+SpeechRecognition 🎤 – Voice input processing
 
-Changes made via Lovable will be committed automatically to this repo.
+Pyttsx3 🔊 – Text-to-speech output
 
-**Use your preferred IDE**
+FastAPI / Flask (Optional) – Backend integration for API support
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
-
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
-
-Follow these steps:
-
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
-
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
-
-# Step 3: Install the necessary dependencies.
-npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
-```
-
-**Edit a file directly in GitHub**
-
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
-
-**Use GitHub Codespaces**
-
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
-
-## What technologies are used for this project?
-
-This project is built with:
-
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
-
-## How can I deploy this project?
-
-Simply open [Lovable](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and click on Share -> Publish.
-
-## Can I connect a custom domain to my Lovable project?
-
-Yes, you can!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+BeautifulSoup – Web scraping for data extraction
