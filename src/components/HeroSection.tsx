@@ -1,9 +1,6 @@
 import { motion } from "framer-motion";
-import { ArrowRight, Check, Download, Shield, X } from "lucide-react";
-import { useState } from "react";
+import { ArrowRight, Check, Download, Shield } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
-import jarvisImage from "@/assets/jarvis-listening.png";
 
 const HeroSection = () => {
   return (
@@ -20,23 +17,6 @@ const HeroSection = () => {
       />
 
       <div className="container relative z-10 text-center">
-        {/* JARVIS listening image with modal */}
-        <Dialog>
-          <DialogTrigger asChild>
-            <motion.div
-              initial={{ opacity: 0, scale: 0.8 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ delay: 0.1, duration: 0.8 }}
-              className="mx-auto mb-8 w-48 cursor-pointer md:w-64"
-            >
-              <img src={jarvisImage} alt="J.A.R.V.I.S AI listening interface" className="w-full drop-shadow-[0_0_40px_hsl(195_100%_50%/0.4)] transition-transform hover:scale-105" />
-            </motion.div>
-          </DialogTrigger>
-          <DialogContent className="border-primary/20 bg-background/95 backdrop-blur-xl sm:max-w-lg">
-            <img src={jarvisImage} alt="J.A.R.V.I.S AI listening interface" className="w-full drop-shadow-[0_0_60px_hsl(195_100%_50%/0.5)]" />
-            <p className="text-center font-display text-sm uppercase tracking-widest text-primary">J.A.R.V.I.S — Listening</p>
-          </DialogContent>
-        </Dialog>
 
         {/* Toggle pill */}
         <motion.div
@@ -72,7 +52,7 @@ const HeroSection = () => {
           transition={{ delay: 0.4 }}
           className="mx-auto max-w-5xl font-display text-4xl font-bold uppercase leading-tight tracking-tight md:text-7xl"
         >
-          <span className="text-foreground">Your Personal AI.</span>
+          <span className="text-foreground">AI-Powered Assistant.</span>
           <br />
           <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
             J.A.R.V.I.S at Your Service
