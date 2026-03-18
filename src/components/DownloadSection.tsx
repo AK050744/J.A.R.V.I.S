@@ -1,7 +1,8 @@
 import { motion } from "framer-motion";
 import { Download, Github } from "lucide-react";
 import { Button } from "@/components/ui/button";
-
+import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
+import jarvisImage from "@/assets/jarvis-listening.png";
 const DownloadSection = () => (
   <section id="download" className="relative py-24">
     <div className="pointer-events-none absolute inset-0">
